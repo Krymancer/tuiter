@@ -27,7 +27,7 @@ A user has be able to:
 We imagine a user been stored in the database as:
 
 | Column     | Type                         | Description                              | 
-|:-----------|:----------------------------:|:-----------------------------------------|
+|:-----------|:-----------------------------|:-----------------------------------------|
 | id         | text(100) PK Not Null        | Uuid stored as string                    |
 | username   | text(100) Not Null Unique    | username, no special characters          |
 | hash       | text(500) Not Null           | hashed password                          |
@@ -38,7 +38,7 @@ We imagine a user been stored in the database as:
 And a tweet:
 
 | Column     | Type                  | Description                    |
-|:-----------|:---------------------:|:-------------------------------|
+|:-----------|:----------------------|:-------------------------------|
 | id         | text(100) PK Not Null | Uuid stored as string          | 
 | content    | text(256) Not Null    | content stored as string       |
 | author     | text(100) FK Not Null | foreing key, refereces a user  |
@@ -49,7 +49,7 @@ We derive other tables relation these two main entities:
 Followers
 
 | Column     | Type                  | Description                                                  |
-|:-----------|:---------------------:|:-------------------------------------------------------------|
+|:-----------|:----------------------|:-------------------------------------------------------------|
 | id         | text(100) PK Not Null | Uuid stored as string                                        | 
 | following  | text(100) FK Not Null | foreing key, reference a user that follow target user        |
 | target     | text(100) FK Not Null | foreing key, references a user that is followed by following |
@@ -58,7 +58,7 @@ Followers
 Likes
 
 | Column     | Type                  | Description                                                  |
-|:-----------|:---------------------:|:-------------------------------------------------------------|
+|:-----------|:----------------------|:-------------------------------------------------------------|
 | id         | text(100) PK Not Null | Uuid stored as string                                        | 
 | tweet      | text(100) FK Not Null | foreing key, reference a tweet                               |
 | user       | text(100) FK Not Null | foreing key, references a user that liked the tweet          |
@@ -66,7 +66,7 @@ Likes
 Replies
 
 | Column       | Type                  | Description                                                  |
-|:-------------|:---------------------:|:-------------------------------------------------------------|
+|:-------------|:----------------------|:-------------------------------------------------------------|
 | id           | text(100) PK Not Null | Uuid stored as string                                        | 
 | tweet        | text(100) FK Not Null | foreing key, reference a tweet                               |
 | author       | text(100) FK Not Null | foreing key, references a user that liked the tweet          |
