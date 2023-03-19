@@ -1,3 +1,6 @@
 [submodule "backend"]
 	path = backend
 	url = https://github.com/krymancer/tuiter-backend-rust
+[submodule "frontend"]
+	path = frontend
+	url = https://github.com/Krymancer/tuiter-frontend-solidjs
