@@ -51,7 +51,7 @@ Followers
 | Column     | Type                  | Description                                                  |
 |:-----------|:----------------------|:-------------------------------------------------------------|
 | id         | text(100) PK Not Null | Uuid stored as string                                        | 
-| following  | text(100) FK Not Null | foreing key, reference a user that follow target user        |
+| follower  | text(100) FK Not Null | foreing key, reference a user that follow target user        |
 | target     | text(100) FK Not Null | foreing key, references a user that is followed by following |
 
 
